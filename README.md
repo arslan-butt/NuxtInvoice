@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+# InvoiceApp
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**InvoiceApp** is a simple, intuitive invoice management application built using Nuxt 3 and Vuetify 3. It allows users to manage customer invoices, add multiple products, and calculate totals with discounts. It is designed to evolve through multiple versions, including a future SaaS version.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Create and manage invoices.
+- Select products for each invoice.
+- Add and remove products dynamically.
+- Calculate item-specific and full-invoice discounts.
+- Modern UI with Vuetify 3 components.
+- Fully responsive and user-friendly.
+- Uses Pinia for state management.
 
-```bash
-# npm
-npm install
+## Installation
 
-# pnpm
-pnpm install
+### Prerequisites
 
-# yarn
-yarn install
+Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 
-# bun
-bun install
-```
+### Steps
 
-## Development Server
+1. Clone the repository:
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+   ```bash
+   git clone https://github.com/yourusername/invoiceapp.git
+   ```
