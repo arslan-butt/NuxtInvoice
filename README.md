@@ -1,6 +1,6 @@
-# InvoiceApp
+# NuxtInvoice
 
-**InvoiceApp** is a simple, intuitive invoice management application built using Nuxt 3 and Vuetify 3. It allows users to manage customer invoices, add multiple products, and calculate totals with discounts. It is designed to evolve through multiple versions, including a future SaaS version.
+**NuxtInvoice** is a simple, intuitive invoice management application built using Nuxt 3 and Vuetify 3. It allows users to manage customer invoices, add multiple products, and calculate totals with discounts. It is designed to evolve through multiple versions, including a future SaaS version.
 
 ## Features
 
