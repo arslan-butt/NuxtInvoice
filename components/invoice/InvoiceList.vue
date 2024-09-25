@@ -23,8 +23,8 @@
 
 <script setup>
 import { ref } from "vue";
-import AddInvoice from "@/components/invoice/AddInvoice.vue"; // Importing the AddInvoice component
-import { useInvoiceStore } from "@/stores/invoice"; // Assuming you have an invoice store
+import AddInvoice from "@/components/invoice/AddInvoice.vue";
+import { useInvoiceStore } from "@/stores/invoice";
 
 const invoiceStore = useInvoiceStore();
 const invoices = ref(invoiceStore.invoices);
