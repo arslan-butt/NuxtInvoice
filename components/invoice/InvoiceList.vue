@@ -9,7 +9,7 @@
         <v-toolbar flat>
           <v-toolbar-title>Invoice List</v-toolbar-title>
           <v-spacer></v-spacer>
-          <AddInvoice @add-invoice="addInvoice" />
+          <AddInvoice @add-invoice="createInvoice" />
         </v-toolbar>
       </template>
 
@@ -29,14 +29,14 @@ import { useInvoiceStore } from "@/stores/invoice";
 const invoiceStore = useInvoiceStore();
 const invoices = ref(invoiceStore.invoices);
 const headers = [
-  { text: "Date", value: "date" },
-  { text: "Customer Name", value: "customerName" },
-  { text: "Total Amount", value: "totalAmount" },
-  { text: "Actions", value: "actions", sortable: false },
+  { title: "Date", key: "date" },
+  { title: "Customer Name", key: "customerName" },
+  { title: "Total Amount", key: "totalAmount" },
+  { title: "Actions", key: "actions", sortable: false },
 ];
 
-const addInvoice = (newInvoice) => {
-  invoiceStore.addInvoice(newInvoice);
+const createInvoice = (newInvoice) => {
+  invoiceStore.createInvoice(newInvoice);
 };
 
 const editInvoice = (item) => {

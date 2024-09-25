@@ -1,7 +1,14 @@
 <template>
   <v-dialog v-model="dialog" width="1000">
     <template v-slot:activator="{ props }">
-      <v-btn color="primary" dark v-bind="props">New Invoice</v-btn>
+      <v-btn
+        prepend-icon="mdi-plus"
+        color="primary"
+        variant="flat"
+        v-bind="props"
+      >
+        New Invoice
+      </v-btn>
     </template>
     <v-card>
       <v-card-title>
@@ -34,7 +41,7 @@
           <v-divider></v-divider>
 
           <v-row v-for="(item, index) in invoice.items" :key="index">
-            <!-- <v-col cols="12" md="4">
+            <v-col cols="12" md="4">
               <v-autocomplete
                 v-model="item.productId"
                 :items="products"
@@ -43,7 +50,7 @@
                 label="Select Product"
                 @change="updateUnitPrice(index)"
               ></v-autocomplete>
-            </v-col> -->
+            </v-col>
             <v-col cols="12" md="4">
               <v-text-field
                 label="Product Name"

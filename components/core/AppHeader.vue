@@ -1,21 +1,26 @@
 <template>
   <v-app-bar class="px-3">
-    <v-app-bar-title>ARSLAN</v-app-bar-title>
+    <template v-slot:prepend>
+      <v-avatar rounded="0">
+        <img height="40" src="/img/icon-green.svg" alt="logo" />
+      </v-avatar>
+    </template>
+    <v-app-bar-title class="ml-0 font-weight-bold text-secondary">
+      NuxtInvoice
+    </v-app-bar-title>
     <v-spacer></v-spacer>
 
-    <v-btn
-      :prepend-icon="
-        theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'
-      "
-      text="Toggle Theme"
-      slim
-      @click="onClick"
-    ></v-btn>
+    <template v-slot:append>
+      <div class="d-flex ga-2">
+        <ThemeToggle />
+      </div>
+    </template>
   </v-app-bar>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import ThemeToggle from "./ThemeToggle.vue";
 const emit = defineEmits(["update-theme"]);
 
 const theme = ref("light");

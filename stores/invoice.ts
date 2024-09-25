@@ -5,7 +5,7 @@ import type { Product } from "@/types/product";
 export const useInvoiceStore = defineStore("invoice", {
   state: () => ({
     invoices: [] as Invoice[],
-    products: [] as Product[], // Assuming you have a products list to select from
+    products: [] as Product[],
   }),
 
   actions: {
