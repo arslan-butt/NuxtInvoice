@@ -23,7 +23,7 @@
 
 <script setup>
 import { ref } from "vue";
-import AddInvoice from "@/components/invoice/AddInvoice.vue";
+import AddInvoice from "~/components/invoice/AddInvoice.vue";
 import { useInvoiceStore } from "@/stores/invoice";
 
 const invoiceStore = useInvoiceStore();

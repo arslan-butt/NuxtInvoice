@@ -113,4 +113,5 @@ export default {
   VTimeline: {
     lineThickness: 1,
   },
+  VCardText: {},
 };
