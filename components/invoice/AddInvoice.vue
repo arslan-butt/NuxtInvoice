@@ -360,6 +360,7 @@ const cancel = () => {
 // Function to review the invoice (could navigate to another page or trigger validation)
 const saveInvoice = () => {
   // Emit the invoice for further processing
+  console.log(invoice.value);
   emit("saveInvoice", invoice.value);
   dialog.value = false;
 };

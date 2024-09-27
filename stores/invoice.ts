@@ -29,5 +29,37 @@ export const useInvoiceStore = defineStore("invoice", {
     setProducts(productList: Product[]) {
       this.products = productList;
     },
+
+    // Function to generate dummy invoices
+    generateDummyInvoices() {
+      const dummyInvoices: Invoice[] = [
+        {
+          id: 1,
+          invoiceNumber: "INV-10001",
+          date: "2024-09-01",
+          customerName: "John Doe",
+          totalAmount: 150.0,
+          status: "Paid",
+        },
+        {
+          id: 2,
+          invoiceNumber: "INV-10002",
+          date: "2024-09-05",
+          customerName: "Jane Smith",
+          totalAmount: 250.0,
+          status: "Pending",
+        },
+        {
+          id: 3,
+          invoiceNumber: "INV-10003",
+          date: "2024-09-10",
+          customerName: "Alice Johnson",
+          totalAmount: 300.0,
+          status: "Cancelled",
+        },
+      ];
+
+      this.invoices.push(...dummyInvoices);
+    },
   },
 });
