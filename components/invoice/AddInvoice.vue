@@ -247,11 +247,14 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useProductStore } from "@/stores/product"; // Assuming you have a product store
+import { useInvoiceStore } from "@/stores/invoice"; // Assuming you have a product store
 import { defineEmits } from "vue";
 
 const emit = defineEmits();
 const dialog = ref(false);
 const formTitle = ref("New Invoice");
+
+const invoiceStore = useInvoiceStore();
 
 const invoiceDate = new Date().toLocaleDateString();
 const invoiceNumber =
@@ -359,9 +362,8 @@ const cancel = () => {
 
 // Function to review the invoice (could navigate to another page or trigger validation)
 const saveInvoice = () => {
-  // Emit the invoice for further processing
   console.log(invoice.value);
-  emit("saveInvoice", invoice.value);
+  // invoiceStore.createInvoice(invoice);
   dialog.value = false;
 };
 </script>
